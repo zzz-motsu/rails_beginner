@@ -6,6 +6,9 @@
     <%# Gemのdeviseが用意してくれているヘルパーメソッド、ユーザーがログインしているか判定 %>
     <% if user_signed_in? %>
       <li>
+        ようこそ！ <%= current_user.name %>さん
+      </li>
+      <li>
         <%= link_to("質問作成", "/questions/new") %>
       </li>
       <li>
