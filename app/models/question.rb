@@ -1,4 +1,6 @@
 class Question < ApplicationRecord
+    #1つの質問は複数の回答を持つ
+    has_many :answers, dependent: :destroy
     #1つの質問は1人のユーザーに属する
     belongs_to :user
 
